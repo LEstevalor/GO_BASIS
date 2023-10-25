@@ -7,4 +7,4 @@
 
 参考 Go 中文网：https://go.p2hp.com/
 
-学习教程：https://go.p2hp.com/tour/
+快速学习教程：https://go.p2hp.com/tour/
