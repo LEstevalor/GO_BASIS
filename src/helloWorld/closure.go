@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main9() {
 	r1 := increment() // 此时r1就是返回的内部函数
 	fmt.Println(r1)   // 0xa29780
 
