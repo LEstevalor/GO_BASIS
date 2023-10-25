@@ -39,25 +39,24 @@ func main11() {
 
 	fmt.Println(v1, v2, v3, p)
 
-	var aa [10]int  // 声明
+	var aa [10]int // 声明
 	aa[1] = 44
 	aa[4] = 66
-	fmt.Println(aa)  // [0 44 0 0 66 0 0 0 0 0]
+	fmt.Println(aa) // [0 44 0 0 66 0 0 0 0 0]
 
-	primes := [6]int{2, 3, 5, 7, 11, 13}  // 赋值声明
-	fmt.Println(primes)  // [2 3 5 7 11 13]
+	primes := [6]int{2, 3, 5, 7, 11, 13} // 赋值声明
+	fmt.Println(primes)                  // [2 3 5 7 11 13]
 
-	nums := [][]int {
+	nums := [][]int{
 		{1, 2},
 		{3, 4},
 	}
-	fmt.Println(nums)  // [[1 2] [3 4]]
+	fmt.Println(nums) // [[1 2] [3 4]]
 
 	//var numns [1][2] int
 
-
 	r := []bool{true, false, true, true, false, true}
-	fmt.Println(r)  // [true false true true false true]
+	fmt.Println(r) // [true false true true false true]
 
 	s := []struct {
 		i int
@@ -70,28 +69,32 @@ func main11() {
 		{11, false},
 		{13, true},
 	}
-	fmt.Println(s)  // [{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}]
+	fmt.Println(s)
+	// [{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}]
 
 	var sss []int
 	sss = primes[:]
-	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))  // len=6 cap=6
+	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))
+	// len=6 cap=6
 	sss = append(sss, 1, 2)
-	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))  // len=8 cap=12
-	fmt.Println(primes)  // [2 3 5 7 11 13]
+	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))
+	// len=8 cap=12
+	fmt.Println(primes) // [2 3 5 7 11 13]
 	sss = append(sss, 1, 5, 4, 5, 6, 4)
-	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))  // len=14 cap=24
+	fmt.Printf("len=%d cap=%d \n", len(sss), cap(sss))
+	// len=14 cap=24
 
 	for i, v := range primes {
-		fmt.Println(i,v)
+		fmt.Println(i, v)
 	}
 	/*
-	0 2
-	1 3
-	2 5
-	3 7
-	4 11
-	5 13
-	 */
+		0 2
+		1 3
+		2 5
+		3 7
+		4 11
+		5 13
+	*/
 
 }
 
