@@ -19,7 +19,6 @@ func describeTest(i interface{}) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }
 
-// 节10 - 接口
 func main()  {
 	/**
 		一个接口类型 定义为一组方法签名.
@@ -102,6 +101,25 @@ func main()  {
 	default:
 		fmt.Printf("I don't know about type %T!\n", v)
 	}
+
+
+	/**
+	Stringer接口
+
+		最普遍的接口之一是由fmt包定义的Stringer （是一种可将自身描述为字符串的类型。 fmt 包（以及许多其他包）用此接口以打印值.）
+		type Stringer interface {
+			String() string
+		}
+	 */
+	host := map[string]IPAddr{
+		"接着紧紧闭上眼": {1, 2, 3, 4},
+		"在我忘记之前": {},
+	}
+	fmt.Println(host)  // map[在我忘记之前:[0 0 0 0] 接着紧紧闭上眼:[1 2 3 4]]
+
+	for name, ip := range(host) {
+		fmt.Printf("%v - %v  ", name, ip)  // 在我忘记之前 - [0 0 0 0]  接着紧紧闭上眼 - [1 2 3 4]
+	}
 }
 
 type myFloat float64
@@ -123,3 +141,5 @@ func (v *VertexT) Abs() float64 {
 	}
 	return math.Sqrt(v.X * v.X + v.Y * v.Y)
 }
+
+type IPAddr [4]byte
