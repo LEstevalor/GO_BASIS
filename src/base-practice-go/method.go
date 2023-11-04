@@ -1,9 +1,12 @@
 package practice
 
+// 节9 - 方法
+
 import (
 	"fmt"
 	"math"
 )
+// 节9 - 方法
 
 type VertexMethod struct {
 	x, y string
